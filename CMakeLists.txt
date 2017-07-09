@@ -3,4 +3,5 @@ project(Grafos2017_1)
 
 set(CMAKE_C_STANDARD 11)
 
-add_custom_target(Grafos2017_1 COMMAND make)
+set(SOURCE_FILES main.c)
+add_executable(Grafos2017_1 ${SOURCE_FILES})
