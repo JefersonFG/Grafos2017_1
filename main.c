@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
     if (validateInput(argc, argv) == 0) {
         printf("Wrong input, supported format: ./main -algorithm -function filename\n");
         printf("Add a -debug at the end to receive information on performance metrics\n");
-        return 0;
+        exit(1);
     }
 
     graphSize = (int*) calloc(2, sizeof(int));
@@ -101,6 +101,8 @@ void printDistances(int *distances, int numVertices) {
         }
 
         printf("%d", distances[i]);
-    } else
-        printf("Error calculating distances\n");
+    } else {
+        printf("Error calculating distances");
+        exit(1);
+    }
 }
