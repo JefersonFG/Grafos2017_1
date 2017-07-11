@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "graph.h"
 #include "persistence.h"
 #include "graph_processing.h"
 
@@ -26,9 +27,10 @@ void printDistances(int *distances, int vertices);
 int main(int argc, char *argv[]) {
     int numVertices;
     int numEdges;
-    int i;
     int *graphSize = NULL;
-    int **graphEdges = NULL;
+
+    struct Graph* graph = NULL;
+
     int *distances = NULL;
     int numComponents;
 
@@ -43,32 +45,24 @@ int main(int argc, char *argv[]) {
     numVertices = graphSize[0];
     numEdges = graphSize[1];
 
-    graphEdges = calloc(numEdges, sizeof(int*));
+    graph = createGraph(numVertices);
 
-    if (graphEdges)
-        for (i = 0; i < numEdges; i++)
-            graphEdges[i] = calloc(2, sizeof(int));
-    else {
-        printf("Error: out of memory\n");
-        return 0;
-    }
-
-    readInputFile(argv[3], numEdges, graphEdges);
+    readInputFile(argv[3], numEdges, graph);
 
     if (!strcmp(argv[1], "-bfs")) {
         if (!strcmp(argv[2], "-c")) {
-            numComponents = numOfConnectedComponentsBfs(graphEdges, numVertices, numEdges);
+            numComponents = numOfConnectedComponentsBfs(graph, numVertices, numEdges);
             printComponents(numComponents);
         } else {
-            distances = distancesBfs(graphEdges, numVertices, numEdges);
+            distances = distancesBfs(graph, numVertices, numEdges);
             printDistances(distances, numVertices);
         }
     } else {
         if (!strcmp(argv[2], "-c")) {
-            numComponents = numOfConnectedComponentsDfs(graphEdges, numVertices, numEdges);
+            numComponents = numOfConnectedComponentsDfs(graph, numVertices, numEdges);
             printComponents(numComponents);
         } else {
-            distances = distancesDfs(graphEdges, numVertices, numEdges);
+            distances = distancesDfs(graph, numVertices, numEdges);
             printDistances(distances, numVertices);
         }
     }
@@ -76,11 +70,8 @@ int main(int argc, char *argv[]) {
     if (graphSize != NULL)
         free(graphSize);
 
-    if (graphEdges != NULL) {
-        for (i = 0; i < numEdges; i++)
-            free(graphEdges[i]);
-        free(graphEdges);
-    }
+    if (graph != NULL)
+        deleteGraph(graph);
 
     if (distances != NULL)
         free(distances);

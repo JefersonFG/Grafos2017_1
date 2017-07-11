@@ -37,10 +37,10 @@ void addEdge(struct Graph *graph, int source, int destination) {
     graph->adjLists[destination] = newNode;
 }
 
-void deleteGraph(struct Graph **graph) {
+void deleteGraph(struct Graph *graph) {
     int i;
-    for (i = 0; i < (*graph)->numVertices; i++) {
-        struct node* current = (*graph)->adjLists[i];
+    for (i = 0; i < graph->numVertices; i++) {
+        struct node* current = graph->adjLists[i];
         struct node* next;
 
         while (current != NULL) {
@@ -50,5 +50,5 @@ void deleteGraph(struct Graph **graph) {
         }
     }
 
-    *graph = NULL;
+    free(graph);
 }

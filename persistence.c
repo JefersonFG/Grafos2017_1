@@ -6,6 +6,6 @@ void getGraphSize(char *fileName, int *graphSize) {
     printf("Debug: getGraphSize - %s\n", fileName);
 }
 
-void readInputFile(char *fileName, int numEdges, int **graphEdges) {
+void readInputFile(char *fileName, int numEdges, struct Graph *graph) {
     printf("Debug: readInputFile - %s\n", fileName);
 }

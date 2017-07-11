@@ -35,7 +35,7 @@ struct Graph* createGraph(int numVertices);
 void addEdge(struct Graph *graph, int source, int destination);
 
 /// Remove o grafo da memória.
-/// \param graph Ponteiro para o grafo que deve ser removido da memória.
-void deleteGraph(struct Graph **graph);
+/// \param graph Grafo que deve ser removido da memória.
+void deleteGraph(struct Graph *graph);
 
 #endif //GRAFOS2017_1_GRAPH_H
