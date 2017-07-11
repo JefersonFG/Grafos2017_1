@@ -16,8 +16,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph_processing.c" afterPath="$PROJECT_DIR$/graph_processing.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph_processing.h" afterPath="$PROJECT_DIR$/graph_processing.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/persistence.c" afterPath="$PROJECT_DIR$/persistence.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/persistence.h" afterPath="$PROJECT_DIR$/persistence.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +28,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="41" column="37" lean-forward="true" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+            <state relative-caret-position="532">
+              <caret line="45" column="48" lean-forward="true" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graph.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graph.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="736">
+              <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graph.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/graph.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="39" lean-forward="true" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -43,8 +61,8 @@
       <file leaf-file-name="persistence.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/persistence.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -63,8 +81,8 @@
       <file leaf-file-name="graph_processing.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graph_processing.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+            <state relative-caret-position="323">
+              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -74,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/graph_processing.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
-              <caret line="33" column="56" lean-forward="true" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+              <caret line="33" column="62" lean-forward="false" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -91,10 +109,12 @@
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/persistence.c" />
-        <option value="$PROJECT_DIR$/graph_processing.c" />
-        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/persistence.h" />
+        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/graph_processing.h" />
+        <option value="$PROJECT_DIR$/graph_processing.c" />
+        <option value="$PROJECT_DIR$/graph.h" />
+        <option value="$PROJECT_DIR$/graph.c" />
       </list>
     </option>
   </component>
@@ -367,12 +387,12 @@
       <option name="presentableId" value="Default" />
       <updated>1499651840062</updated>
       <workItem from="1499651842925" duration="6015000" />
-      <workItem from="1499705163207" duration="11004000" />
+      <workItem from="1499705163207" duration="13681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17019000" />
+    <option name="totallyTimeSpent" value="19696000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,7 +404,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -479,24 +499,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/persistence.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph_processing.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph_processing.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="56" lean-forward="true" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+        <state relative-caret-position="34">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -509,10 +513,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/graph_processing.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph_processing.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="62" lean-forward="false" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="41" column="37" lean-forward="true" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+        <state relative-caret-position="532">
+          <caret line="45" column="48" lean-forward="true" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="39" lean-forward="true" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
           <folding />
         </state>
       </provider>

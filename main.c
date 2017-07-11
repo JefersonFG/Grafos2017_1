@@ -24,8 +24,8 @@ void printDistances(int *distances, int vertices);
 /// \param argv Argumentos passados para o programa.
 /// \return Em geral, 0 para indicar que o programa finalizou corretamente.
 int main(int argc, char *argv[]) {
-    int vertices;
-    int edges;
+    int numVertices;
+    int numEdges;
     int i;
     int *graphSize = NULL;
     int **graphEdges = NULL;
@@ -40,36 +40,36 @@ int main(int argc, char *argv[]) {
     graphSize = (int*) calloc(2, sizeof(int));
 
     getGraphSize(argv[3], graphSize);
-    vertices = graphSize[0];
-    edges = graphSize[1];
+    numVertices = graphSize[0];
+    numEdges = graphSize[1];
 
-    graphEdges = calloc(edges, sizeof(int*));
+    graphEdges = calloc(numEdges, sizeof(int*));
 
     if (graphEdges)
-        for (i = 0; i < edges; i++)
+        for (i = 0; i < numEdges; i++)
             graphEdges[i] = calloc(2, sizeof(int));
     else {
         printf("Error: out of memory\n");
         return 0;
     }
 
-    readInputFile(argv[3], edges, graphEdges);
+    readInputFile(argv[3], numEdges, graphEdges);
 
     if (!strcmp(argv[1], "-bfs")) {
         if (!strcmp(argv[2], "-c")) {
-            numComponents = numOfConnectedComponentsBfs(graphEdges, vertices, edges);
+            numComponents = numOfConnectedComponentsBfs(graphEdges, numVertices, numEdges);
             printComponents(numComponents);
         } else {
-            distances = distancesBfs(graphEdges, vertices, edges);
-            printDistances(distances, vertices);
+            distances = distancesBfs(graphEdges, numVertices, numEdges);
+            printDistances(distances, numVertices);
         }
     } else {
         if (!strcmp(argv[2], "-c")) {
-            numComponents = numOfConnectedComponentsDfs(graphEdges, vertices, edges);
+            numComponents = numOfConnectedComponentsDfs(graphEdges, numVertices, numEdges);
             printComponents(numComponents);
         } else {
-            distances = distancesDfs(graphEdges, vertices, edges);
-            printDistances(distances, vertices);
+            distances = distancesDfs(graphEdges, numVertices, numEdges);
+            printDistances(distances, numVertices);
         }
     }
 
@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
         free(graphSize);
 
     if (graphEdges != NULL) {
-        for (i = 0; i < edges; i++)
+        for (i = 0; i < numEdges; i++)
             free(graphEdges[i]);
         free(graphEdges);
     }
@@ -100,11 +100,11 @@ void printComponents(int components) {
     printf("%d", components);
 }
 
-void printDistances(int *distances, int vertices) {
+void printDistances(int *distances, int numVertices) {
     if (distances != NULL) {
         int i;
 
-        for (i = 0; i < (vertices - 1); i++) {
+        for (i = 0; i < (numVertices - 1); i++) {
             printf("%d ", distances[i]);
         }
 
