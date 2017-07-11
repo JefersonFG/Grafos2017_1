@@ -36,6 +36,7 @@ int main(int argc, char *argv[]) {
 
     if (validateInput(argc, argv) == 0) {
         printf("Wrong input, supported format: ./main -algorithm -function filename\n");
+        printf("Add a -debug at the end to receive information on performance metrics\n");
         return 0;
     }
 
@@ -80,8 +81,8 @@ int main(int argc, char *argv[]) {
 }
 
 int validateInput(int argc, char *argv[]) {
-    if ((argc == 4 || argc == 5) && (!strcmp(argv[1],"-bfs") || !strcmp(argv[1],"-dfs"))
-        && (!strcmp(argv[2],"-c") || !strcmp(argv[2],"-d")))
+    if ((argc == 4 || (argc == 5 && !strcmp(argv[4],"-debug")))
+        && (!strcmp(argv[1],"-bfs") || !strcmp(argv[1],"-dfs")) && (!strcmp(argv[2],"-c") || !strcmp(argv[2],"-d")))
         return 1;
     else
         return 0;

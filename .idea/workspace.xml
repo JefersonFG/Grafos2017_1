@@ -12,14 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06d71373-c213-4b8d-b553-d655e0db29ba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph.c" afterPath="$PROJECT_DIR$/graph.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph.h" afterPath="$PROJECT_DIR$/graph.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph_processing.c" afterPath="$PROJECT_DIR$/graph_processing.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph_processing.h" afterPath="$PROJECT_DIR$/graph_processing.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/persistence.c" afterPath="$PROJECT_DIR$/persistence.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/persistence.h" afterPath="$PROJECT_DIR$/persistence.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +28,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="73" column="27" lean-forward="true" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
+            <state relative-caret-position="481">
+              <caret line="87" column="17" lean-forward="true" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -117,8 +110,8 @@
         <option value="$PROJECT_DIR$/persistence.c" />
         <option value="$PROJECT_DIR$/graph_processing.c" />
         <option value="$PROJECT_DIR$/graph.h" />
-        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/graph.c" />
+        <option value="$PROJECT_DIR$/main.c" />
       </list>
     </option>
   </component>
@@ -391,12 +384,12 @@
       <option name="presentableId" value="Default" />
       <updated>1499651840062</updated>
       <workItem from="1499651842925" duration="6015000" />
-      <workItem from="1499705163207" duration="14453000" />
+      <workItem from="1499705163207" duration="14756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20468000" />
+    <option name="totallyTimeSpent" value="20771000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -551,8 +544,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="27" lean-forward="true" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
+        <state relative-caret-position="481">
+          <caret line="87" column="17" lean-forward="true" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
           <folding />
         </state>
       </provider>
