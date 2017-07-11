@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "graph.h"
 #include "persistence.h"
 #include "graph_processing.h"
@@ -34,6 +35,9 @@ int main(int argc, char *argv[]) {
     int *distances = NULL;
     int numComponents;
 
+    clock_t start;
+    clock_t end;
+
     if (validateInput(argc, argv) == 0) {
         printf("Wrong input, supported format: ./main -algorithm -function filename\n");
         printf("Add a -debug at the end to receive information on performance metrics\n");
@@ -49,6 +53,9 @@ int main(int argc, char *argv[]) {
     graph = createGraph(numVertices);
 
     readInputFile(argv[3], numEdges, graph);
+
+    if (argc == 5 && !strcmp(argv[4],"-debug"))
+        start = clock();
 
     if (!strcmp(argv[1], "-bfs")) {
         if (!strcmp(argv[2], "-c")) {
@@ -66,6 +73,11 @@ int main(int argc, char *argv[]) {
             distances = distancesDfs(graph, numVertices, numEdges);
             printDistances(distances, numVertices);
         }
+    }
+
+    if (argc == 5 && !strcmp(argv[4],"-debug")) {
+        end = clock();
+        printf("Time elapsed: %f", (double) (end - start) / CLOCKS_PER_SEC);
     }
 
     if (graphSize != NULL)
