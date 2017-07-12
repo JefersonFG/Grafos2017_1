@@ -33,12 +33,10 @@ int numOfConnectedComponentsBfs(struct Graph *graph, int numVertices, int numEdg
         }
     }
 
-    printf("Debug: numOfConnectedComponentsBfs\n");
     return connections;
 }
 
 int numOfConnectedComponentsDfs(struct Graph *graph, int numVertices, int numEdges) {
-    printf("Debug: numOfConnectedComponentsDfs\n");
     return 0;
 }
 
@@ -65,11 +63,9 @@ int* distancesBfs(struct Graph *graph, int numVertices, int numEdges) {
         }
     }
 
-    printf("Debug: distancesBfs\n");
     return distances;
 }
 
 int* distancesDfs(struct Graph *graph, int numVertices, int numEdges) {
-    printf("Debug: distancesDfs\n");
     return NULL;
 }
