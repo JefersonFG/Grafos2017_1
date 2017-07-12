@@ -6,3 +6,5 @@ main\.exe
 *.o
 
 instances/
+
+\.idea/workspace\.xml
