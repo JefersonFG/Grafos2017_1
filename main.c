@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 
     if (argc == 5 && !strcmp(argv[4],"-debug")) {
         end = clock();
-        printf("Time elapsed: %f", (double) (end - start) / CLOCKS_PER_SEC);
+        printf("Time elapsed: %f\n", (double) (end - start) / CLOCKS_PER_SEC);
     }
 
     if (graphSize != NULL)
@@ -101,18 +101,16 @@ int validateInput(int argc, char *argv[]) {
 }
 
 void printComponents(int components) {
-    printf("%d", components);
+    printf("\nNumber of connected components: %d\n", components);
 }
 
 void printDistances(int *distances, int numVertices) {
     if (distances != NULL) {
         int i;
-
-        for (i = 0; i < (numVertices - 1); i++) {
-            printf("%d ", distances[i]);
+        printf("\nDistances: \n");
+        for (i = 0; i < numVertices; i++) {
+            printf("\td(0,%d): %d \n", i, distances[i]);
         }
-
-        printf("%d", distances[i]);
     } else {
         printf("Error calculating distances");
         exit(1);
