@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "graph_processing.h"
 #include "queue.h"
+#include "stack.h"
 
 int numOfConnectedComponentsBfs(struct Graph *graph, int numVertices, int numEdges) {
     int isNodeExplored[numVertices];
@@ -37,7 +38,37 @@ int numOfConnectedComponentsBfs(struct Graph *graph, int numVertices, int numEdg
 }
 
 int numOfConnectedComponentsDfs(struct Graph *graph, int numVertices, int numEdges) {
-    return 0;
+    int isNodeExplored[numVertices];
+    struct Stack * stack = initializeStack();
+    struct node * current;
+    int i, v, w, connections = 0;
+
+    // initializes all nodes as unexplored
+    for (i = 0; i < numVertices; i++){
+        isNodeExplored[i] = 0;
+    }
+
+    for (i = 0; i < numVertices; i++){
+        if (!isNodeExplored[i]){
+            // DFS
+            isNodeExplored[i] = 1;
+            stack = pushStack(stack, i);
+            while (!isEmptyStack(stack)){
+                popStack(&stack, &v);
+                for (current = graph->adjLists[v]; current != NULL; current = current->next){
+                    w = current->vertex;
+                    if (!isNodeExplored[w]) {
+                        isNodeExplored[w] = 1;
+                        stack = pushStack(stack, w);
+                    }
+                }
+            }
+            connections += 1;
+        }
+    }
+    
+            
+    return connections;
 }
 
 int* distancesBfs(struct Graph *graph, int numVertices, int numEdges) {
