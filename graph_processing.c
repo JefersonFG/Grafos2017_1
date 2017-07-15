@@ -98,5 +98,27 @@ int* distancesBfs(struct Graph *graph, int numVertices, int numEdges) {
 }
 
 int* distancesDfs(struct Graph *graph, int numVertices, int numEdges) {
-    return NULL;
+       int * distances = (int *) malloc(sizeof(int) * numVertices);
+    struct Stack * stack = initializeStack();
+    struct node * current;
+    int i, v, w;
+
+    for (i = 0; i < numVertices; i++){
+        distances[i] = -1;
+    }
+    distances[0] = 0; // Todas distâncias serão calculadas a partir do nodo 0
+    stack = pushStack(stack, 0);
+    
+    while (!isEmptyStack(stack)){
+        popStack(&stack, &v);
+        for (current = graph->adjLists[v]; current != NULL; current = current->next){
+            w = current->vertex;
+            if (distances[w] == -1) {
+                distances[w] = distances[v] + 1;
+                stack = pushStack(stack, w);
+            }
+        }
+    }
+
+    return distances;
 }
