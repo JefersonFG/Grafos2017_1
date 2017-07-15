@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
+#include <sys/time.h>
 #include "graph.h"
 #include "persistence.h"
 #include "graph_processing.h"
@@ -35,8 +35,8 @@ int main(int argc, char *argv[]) {
     int *distances = NULL;
     int numComponents;
 
-    clock_t start;
-    clock_t end;
+    struct timeval t1, t2;
+    double elapsedTime;
 
     if (validateInput(argc, argv) == 0) {
         printf("Wrong input, supported format: ./main -algorithm -function filename\n");
@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
     readInputFile(argv[3], numEdges, graph);
 
     if (argc == 5 && !strcmp(argv[4],"-debug"))
-        start = clock();
+        gettimeofday(&t1, NULL);
 
     if (!strcmp(argv[1], "-bfs")) {
         if (!strcmp(argv[2], "-c")) {
@@ -76,8 +76,10 @@ int main(int argc, char *argv[]) {
     }
 
     if (argc == 5 && !strcmp(argv[4],"-debug")) {
-        end = clock();
-        printf("Time elapsed: %f", (double) (end - start) / CLOCKS_PER_SEC);
+        gettimeofday(&t2, NULL);
+        elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;
+        elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;
+        printf("Time elapsed: %f ms\n", elapsedTime);
     }
 
     if (graphSize != NULL)
@@ -101,18 +103,16 @@ int validateInput(int argc, char *argv[]) {
 }
 
 void printComponents(int components) {
-    printf("%d", components);
+    printf("\nNumber of connected components: %d\n", components);
 }
 
 void printDistances(int *distances, int numVertices) {
     if (distances != NULL) {
         int i;
-
-        for (i = 0; i < (numVertices - 1); i++) {
-            printf("%d ", distances[i]);
+        printf("\nDistances: \n");
+        for (i = 0; i < numVertices; i++) {
+            printf("\td(0,%d): %d \n", i, distances[i]);
         }
-
-        printf("%d", distances[i]);
     } else {
         printf("Error calculating distances");
         exit(1);
