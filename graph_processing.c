@@ -4,7 +4,7 @@
 #include "queue.h"
 #include "stack.h"
 
-void DFS(int node, isNodeExplored[], int numVertices) {
+void DFS(int node, int isNodeExplored[], int numVertices) {
     // node -> de qual nodo irá partir o DFS
     isNodeExplored[node] = 1;
     for (i = 0; i < numVertices; i++){
