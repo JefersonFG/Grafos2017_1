@@ -103,15 +103,17 @@ int validateInput(int argc, char *argv[]) {
 }
 
 void printComponents(int components) {
-    printf("\nNumber of connected components: %d\n", components);
+    // printf("\nNumber of connected components: %d\n", components);
+    printf("%d", components);
 }
 
 void printDistances(int *distances, int numVertices) {
     if (distances != NULL) {
         int i;
-        printf("\nDistances: \n");
+        //printf("\nDistances: \n");
         for (i = 0; i < numVertices; i++) {
-            printf("\td(0,%d): %d \n", i, distances[i]);
+            //printf("\td(0,%d): %d \n", i, distances[i]);
+            printf("%d ", distances[i]);
         }
     } else {
         printf("Error calculating distances");
